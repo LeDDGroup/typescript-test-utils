@@ -44,7 +44,7 @@ There are currently some implemented, if you have any idea for a new one send a 
 import { assert, HasProperties, Extends, Equals } from "typescript-test-utils";
 
 HasProperties<{ a: string, b: number }, "a" | "b"> // true
-assert<HasProperties<{ a: string, b: number }, "a" | "c">>(true) // false
+HasProperties<{ a: string, b: number }, "a" | "c">> // false
 
 Extends<{ a: string, b: string >, { a: string }> // true
 Extends<{ a: string, b: string >, { c: string }> // false
