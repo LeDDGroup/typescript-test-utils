@@ -44,10 +44,10 @@ There are currently some implemented, if you have any idea for a new one send a 
 import { assert, HasProperties, Extends, Equals } from "typescript-test-utils";
 
 HasProperties<{ a: string, b: number }, "a" | "b"> // true
-HasProperties<{ a: string, b: number }, "a" | "c">> // false
+HasProperties<{ a: string, b: number }, "a" | "c"> // false
 
-Extends<{ a: string, b: string >, { a: string }> // true
-Extends<{ a: string, b: string >, { c: string }> // false
+Extends<{ a: string, b: string }, { a: string }> // true
+Extends<{ a: string, b: string }, { c: string }> // false
 
 Equals<{ a: string }, { a: string }> // true
 Equals<{ a: string, b: string }, { a: string }> // false
