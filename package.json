@@ -17,6 +17,7 @@
     "prebuild": "rm -rf dist",
     "build": "tsc",
     "prepare": "npm run build",
+    "release": "standard-version",
     "test": "tsc --noEmit src/*.test.ts"
   },
   "husky": {
