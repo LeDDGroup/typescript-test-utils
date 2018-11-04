@@ -6,5 +6,6 @@ export type HasProperties<T, K extends IndexType> = Extends<
   T,
   ObjectWithProperties<K>
 >;
+export type Not<T extends boolean> = T extends true ? false : true;
 
 export function assert<T>(expected: T) {}

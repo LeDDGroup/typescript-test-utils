@@ -41,7 +41,7 @@ And just run tsc on your test files to check for type errors
 There are currently some implemented, if you have any idea for a new one send a PR or open an issue
 
 ```ts
-import { assert, HasProperties, Extends, Equals } from "typescript-test-utils";
+import { assert, HasProperties, Extends, Equals, Not } from "typescript-test-utils";
 
 HasProperties<{ a: string, b: number }, "a" | "b"> // true
 HasProperties<{ a: string, b: number }, "a" | "c"> // false
@@ -51,4 +51,9 @@ Extends<{ a: string, b: string }, { c: string }> // false
 
 Equals<{ a: string }, { a: string }> // true
 Equals<{ a: string, b: string }, { a: string }> // false
+
+Not<true> // false
+Not<false> // true
+
+Not<Equals<{ a: string, b: string }, { a: string }>> // true
 ```
