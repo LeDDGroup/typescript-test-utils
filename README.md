@@ -1,5 +1,9 @@
 # typescript-test-utils
 
+[![npm version](https://img.shields.io/npm/v/typescript-test-utils.svg "test")](https://www.npmjs.com/package/typescript-test-utils)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
 Helper types for testing your package exported types
 
 - Only depends on typescript installed.
