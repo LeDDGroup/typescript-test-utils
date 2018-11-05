@@ -57,3 +57,19 @@ Not<false> // true
 
 Not<Equals<{ a: string, b: string }, { a: string }>> // true
 ```
+
+## Adding your own assertions
+
+You only need to make a type that returns true or false, for example:
+
+```ts
+type Not<T extends boolean> = T extends true ? false : true;
+```
+
+or
+
+```ts
+type Extends<T, K> = T extends K ? true : false;
+```
+
+These are the definitions of the `Not` and `Extends` helpers
