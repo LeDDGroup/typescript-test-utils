@@ -7,7 +7,7 @@
 Helper types for testing your package exported types
 
 - Only depends on typescript installed.
-- Easly extendable
+- Easily extendable
 
 ## Usage
 
