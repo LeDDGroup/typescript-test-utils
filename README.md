@@ -9,21 +9,35 @@ Helper types for testing your package exported types
 - Only depends on typescript installed.
 - Easily extendable
 
+## Note
+
+I have notice some issues with typescript if your types are too complex, so I recommend using `assertTrue` and `assertFalse` instead of `assert`
+
 ## Usage
 
 You test them with the assert method ( wich is just a placeholder, it doesn't run anything ) and the type helpers
 
 ```ts
-import { assert, HasProperties } from "typescript-test-utils";
+import {
+  assert,
+  assertTrue,
+  assertFalse,
+  HasProperties
+} from "typescript-test-utils";
+
+assertTrue<true>(); // ok
+assertTrue<false>(); // nop
+assertFalse<true>(); // nop
+assertFalse<false>(); // ok
 
 assert<true>(true); // ok
 assert<false>(true); // nop
 
 type MyType = { a: string };
-assert<HasProperties<MyType, "a">>(true); // ok
-assert<HasProperties<MyType, "a">>(false); // nop
-assert<HasProperties<MyType, "b">>(true); // nop
-assert<HasProperties<MyType, "b">>(false); // ok
+assertTrue<HasProperties<MyType, "a">>(); // ok
+assertFalse<HasProperties<MyType, "a">>(); // nop
+assertTrue<HasProperties<MyType, "b">>(); // nop
+assertFalse<HasProperties<MyType, "b">>(); // ok
 ```
 
 And just run tsc on your test files to check for type errors

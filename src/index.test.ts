@@ -1,4 +1,12 @@
-import { assert, HasProperties, Extends, Equals, Not } from "./index";
+import {
+  assert,
+  HasProperties,
+  Extends,
+  Equals,
+  Not,
+  assertTrue,
+  assertFalse
+} from "./index";
 
 type DataType = { a: string; b: string };
 
@@ -10,3 +18,6 @@ assert<Extends<DataType, { c: string }>>(false);
 assert<Extends<DataType, { a: string; b: string }>>(true);
 assert<Equals<DataType, { a: string; b: string }>>(true);
 assert<Not<Equals<DataType, { a: string; b: string }>>>(false);
+
+assertTrue<Equals<DataType, { a: string; b: string }>>();
+assertFalse<Extends<DataType, { c: string }>>();
