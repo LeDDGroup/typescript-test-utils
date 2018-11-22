@@ -1,4 +1,11 @@
 language: node_js
 node_js:
   - stable
-  - "10"
+deploy:
+  provider: npm
+  email: danielpza@protonmail.com
+  api_key:
+    secure: S0cD6UbaJYG6JIZnT+m4+DUhG0kPBi0bWnU4ORliJJJelY5eDbkkufJSfZ9W4XYfwNdTF92NBw6lOxXMat5h2m1140qLYxyiup4ZIN7PkhzRvjJrSBL2OeV3yr9+hpEZDln7uuHPGWCVXVtBXQKU9uhkImxkubkL5+9VZUuSWTzujo3j1+E7c17SAR3zrooEO37oZVkRJrUqAFGasqqUCVs/Omwjz3iNP6gePP2PqCu9aj6fqXE2OUPqv5zUJsUYkFvQ0luSBFUJU2TuT1iE5QbgOETuy2YYDytySbCMf9XVKlFbSvCxBoq1Ou3fj2RM3rKJR2bK1SYUakF6HCjeDVYnF+KtWCBrfY3PEqpgMQzG8pLbubfENUlyO1wVKztyPRuQJhAG/OxQp92KHNmsIW761YgN7J+lh5jUdP4LhUaN6uSjhi1k1yvJM6NpIL8w+R4aE0v9t+UQUspyu5cCLGmuoOTznBnAdzLKxOSWxaWyx2bXgonb28uZ9G+jwleMs3sU6Pl2U1pNOWn7hTExzi7wgquM5y5kNFHDkh1tc32KNcuGJfeTrGkB71ir5TbcFvRYnJ7i460CHtpz/XsU4UeIXo+80h8OtQepv0T2m5lyx+zfs/Yv52DN6XfHmsMB8i9/ucrxBNhAwfpm6eC2gBUw4W0/S47O5mNPLFjn7As=
+  on:
+    tags: true
+    repo: danielpa9708/typescript-test-utils
