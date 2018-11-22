@@ -11,7 +11,7 @@ type And<A extends boolean, B extends boolean> = If<
 export type Extends<A, B> = A extends B ? true : false;
 export type HasProperties<T, K extends keyof any> = Extends<T, ObjectMap<K>>;
 export type Not<T extends boolean> = If<Extends<T, true>, false, true>;
-export type Equals<A, B> = And<Extends<A, B>, Extends<B, A>>;
+export type Equals<A, B> = And<Extends<[A], [B]>, Extends<[B], [A]>>;
 
 export function assert<T extends boolean>(expected: T) {}
 export function assertTrue<T extends true>() {}
