@@ -1,3 +1,9 @@
+
+> [!WARNING]
+> NO LONGER MAINTAINED
+> 
+> see https://github.com/mmkal/expect-type for an alternative
+
 # typescript-test-utils
 
 [![npm version](https://img.shields.io/npm/v/typescript-test-utils.svg "test")](https://www.npmjs.com/package/typescript-test-utils)
